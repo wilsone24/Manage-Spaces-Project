@@ -1,43 +1,97 @@
-
-
-.box{
-   max-width: 1400px;
-   margin: 170px;
+body{
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.5;
+    background-color: white;
+    margin: 0;
 }
 
-.pp-container{
-   transition: all 0.5s ease;
-   margin: 40px;
-   width: 250px;
-   height: 400px;
-   /* background-color: #eee; */
-   border-radius: 10px;
-   box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
-   float: left ;
+.encabezado{
+    background-color: #212529;
+    height: 297px;
+    text-align: center;
 }
 
-.pp-container:hover{
-   transform: scale(1.2);
+.hh1{
+    padding-top: 90px;
+    font-weight: 700;
+    font-size: 57px;
+    color: white;
 }
-img{
-   border-radius:10px ;
+
+.hh2{
+    font-weight:500;
+    font-size: 20px;
+    color: #989898;
 }
+
+.cont{
+    /* background-color: aqua; */
+    max-width: 1300px;
+    height: 1100px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.tarjeta{
+    margin-left: 44px;
+    margin-bottom: 50px;
+    background-color: white;
+    transition: all 0.5s ease;
+    width: 270px;
+    height: 410px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+    float: left ;
+}
+
+.tarjeta:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.4);
+}
+
+.coffe{
+    border-radius: 10px;
+    image-resolution: 300dpi;
+}
+
+footer{
+    background-color: #212529;
+    padding: 3rem;
+    color: white; 
+}
+footer section{
+    float:right;
+}
+
+footer p{
+    margin: 0;
+}
+
+footer a{
+    transition: color 0.3s ease ;
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: cornflowerblue;
+}
+
 
 .boton{
-  margin-top: 20px;
-  margin-left: 50px; 
-  border-radius: 5px;
-  background-color: brown;
-  text-align: center;
-  border: none;
-  padding: 8px;
-}
+    transition: all 0.3s ease;
+    margin-top: 22px;
+    margin-left: 65px; 
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    border: solid 1px #212529;
+    padding: 8px;
+    color: #212529;
+  }
 
-.boton a{
-   color: white;
-}
-
-.boton a:hover{
-   color: white;
-   text-decoration: none;
-}
+.boton:hover{
+    background-color:#212529 ;
+    color:white ;
+    cursor: pointer;
+  }
