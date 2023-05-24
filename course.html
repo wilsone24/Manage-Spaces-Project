@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountIt - Deus X </title>
+    <link rel="stylesheet" href=css/styles.css>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <section class = "sub-header"> 
+      <!--Agregar logo con link-->
+      <nav>
+        <a href="index.html"><img src="img/logo.png"></a>
+        <!--Se agregan los accesos directos a los componentes de la página, se le da un id para javascript al div-->
+        <div class="nav-links" id="navLinks">
+          <!--Agregar icono cerrar y agregar función de ocultar menú (js)-->
+          <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Our Service</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <!--Agregar icono de menú y agregar función de mostrar menú (js)-->
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <h1>Our Courses</h1>
+    </section>
+
+    <!--Se agrega el contenido de la página-->
+    <section class= "course">
+      <h1>Courses We Offer</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+      <div class="row">
+        <div class="course-col">
+          <h3>Intermediate</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </div>
+        <div class="course-col">
+          <h3>Degree</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </div>
+        <div class="course-col">
+          <h3>Post graduation</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Se agrega la sección de facilities-->
+    <section class="facilities">
+      <h1>Our Facilities</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+      <div class="row">
+        <div class="facilities-col">
+          <img src="img/biblio.jpg">
+          <h3>World Class Library</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus reprehenderit optio sit et dolore illo similique delectus illum.</p>
+        </div>
+        <div class="facilities-col">
+          <img src="img/biblio.jpg">
+          <h3>Largest Play Ground</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus reprehenderit optio sit et dolore illo similique delectus illum.</p>
+        </div>
+        <div class="facilities-col">
+          <img src="img/biblio.jpg">
+          <h3>Tasty and Healthy Food</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus reprehenderit optio sit et dolore illo similique delectus illum.</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Se agrega el footer-->
+    <section class="footer">
+      <h4>About Us</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+      <p>Correo: abc@gmail.com</p>
+      <p>Made by Deus X Solution</p>
+    </section>
+    
+  <script src="script.js"></script>
+  </body>
+</html>
+
+<!--https://www.youtube.com/watch?v=oYRda7UtuhA-->
