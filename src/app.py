@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import mysql.connector
 from werkzeug.security import generate_password_hash
 from config import config
+from correos import mensajes, listamen
 
 # Models:
 from models.ModelUser import ModelUser
@@ -31,8 +32,18 @@ def index():
 def services():
     return render_template('services.html')
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        name = request.form['namecontact']
+        email = request.form['emailcontact']
+        subject = request.form['subjectcontact']
+        message = request.form['messagecontact']
+        nuevo = mensajes(name, email, subject, message)
+        nuevo.enviar()
+        listamen.update({email: nuevo})
+        print(listamen)
+        return redirect(url_for('index'))
     return render_template('contact.html')
 
 
