@@ -1,9 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
-import mysql.connector
 from werkzeug.security import generate_password_hash
 from config import config
 from correos import mensajes, Registro_Diario
-
+from models.ModelUser import ModelUser
 # Models:
 from models.ModelUser import ModelUser
 
@@ -12,13 +11,6 @@ from models.entities.User import User
 
 app = Flask(__name__)
 
-db = mysql.connector.connect(
-    host="localhost",
-    user="wilsone",
-    password="WmEo.1739",
-    database="pagina"
-)
-cursor = db.cursor()
 
 @app.route('/')
 def inicio():
@@ -51,7 +43,7 @@ def contact():
 def login():
     if request.method == 'POST':
         user = User(0, request.form['username'], request.form['password'])
-        logged_user = ModelUser.login(db, user)
+        logged_user = ModelUser.login(user)
         if logged_user != None:
             if logged_user.password:
                 return redirect(url_for('home', nombre= logged_user.fullname))
@@ -70,11 +62,9 @@ def register():
         username = request.form['username2']
         password = request.form['password2']
         fullname = request.form['fullname2']
-        sql = 'INSERT INTO Usuarios (id ,username, password, fullname) VALUES (%s, %s, %s, %s)'
-        values = (0,username, generate_password_hash(password), fullname)
-        cursor.execute(sql, values)
-        db.commit()      
-        return redirect(url_for('index'))                        
+        values = (username, generate_password_hash(password), fullname)
+        if ModelUser.register(values):
+            return redirect(url_for('index'))                        
     return render_template('auth/register.html')
 
 @app.route('/logout')
