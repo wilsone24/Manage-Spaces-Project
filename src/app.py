@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import mysql.connector
 from werkzeug.security import generate_password_hash
 from config import config
-from correos import mensajes, listamen
+from correos import mensajes, Registro_Diario
 
 # Models:
 from models.ModelUser import ModelUser
@@ -41,8 +41,8 @@ def contact():
         message = request.form['messagecontact']
         nuevo = mensajes(name, email, subject, message)
         nuevo.enviar()
-        listamen.update({email: nuevo})
-        print(listamen)
+        Registro_Diario.agregar_elemento(nuevo)
+        Registro_Diario.imprimir_lista()
         return redirect(url_for('index'))
     return render_template('contact.html')
 
