@@ -1,4 +1,4 @@
-"""import sqlite3
+""" import sqlite3
 
 # Establecer conexión con la base de datos
 conn = sqlite3.connect('src/database/databa.db')
@@ -13,4 +13,4 @@ cursor.execute(sql, values)
 
 # Guardar los cambios y cerrar la conexión
 conn.commit()
-conn.close()"""
+conn.close() """
