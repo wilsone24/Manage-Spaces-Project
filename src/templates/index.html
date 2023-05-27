@@ -86,23 +86,23 @@
 
   <!--Se agrega la sección de facilities--> <!-- {{ url_for('static', filename='img/biblio.png') }} -->
   <section class="facilities">
-    <h1>Our Facilities</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    <h1>Nuestros servicios</h1>
+    <p>Algunos de los servicios que ofrecemos como Empresa </p>
     <div class="row">
       <div class="facilities-col">
-        <img src="{{ url_for('static', filename='img/biblio.jpg') }}">
-        <h3>World Class Library</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus reprehenderit optio sit et dolore illo similique delectus illum.</p>
+        <img src="{{ url_for('static', filename='img/arduino.jpg') }}">
+        <h3>Instalación de dispositivo</h3>
+        <p>La cantidad de dispositivos que desea en los espacios escogidos por el usuario.</p>
       </div>
       <div class="facilities-col">
-        <img src="{{ url_for('static', filename='img/biblio.jpg') }}">
-        <h3>Largest Play Ground</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus reprehenderit optio sit et dolore illo similique delectus illum.</p>
+        <img src="{{ url_for('static', filename='img/biblioteca.jpg') }}">
+        <h3>Revisión constante</h3>
+        <p>Mantenimiento de la aplicacion y revision constante para asegurar la mayor calidad y la mayor certeza sobre nuestros datos.</p>
       </div>
       <div class="facilities-col">
-        <img src="{{ url_for('static', filename='img/biblio.jpg') }}">
-        <h3>Tasty and Healthy Food</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus reprehenderit optio sit et dolore illo similique delectus illum.</p>
+        <img src="{{ url_for('static', filename='img/estadistica.jpg') }}">
+        <h3>Datos en tiempo real</h3>
+        <p>Generamos cantidades de datos sobre los espacios seleccionados con el fin de poder analizarlos.</p>
       </div>
     </div>
   </section>
@@ -110,19 +110,19 @@
   <!--Se agrega la sección de contacto-->
 
   <section class="cta">
-    <h1>Enroll For Our Various <br>Online Cousres</h1>
+    <h1>Adquiere los servicios <br>Consultar espacios</h1>
     <a href= "/contact" class="hero-btn">Contact Us</a>
   </section>
 
   <!--Se agrega el footer-->
   <section class="footer">
     <h4>About Us</h4>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-    <p>Correo: abc@gmail.com</p>
+    <p>Empresa con capacidad de modificar la percepción y acceso a los espacios </p>
+    <p>Correo: @uninorte.edu.co</p>
     <p>Made by Deus X Solution</p>
   </section>
   
-<script src="script.js"></script>
+  <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
 </body>
 </html>
 

@@ -4,37 +4,37 @@ let products = {
       productName: "Biblioteca Karl C. Parrish Jr.",
       category: "Topwear",
       ocuppation: "35",
-      image: "white-tshirt.jpg",
+      image: "{{url_for('static', filename='img/biblio.jpg')}}",
     },
     {
       productName: "Casa de Estudio Alfredo Correa De Andreis",
       category: "Bottomwear",
       ocuppation: "64",
-      image: "short-skirt.jpg",
+      image: "img/biblio.jpg",
     },
     {
       productName: "Bloque k salon cree",
       category: "Watch",
       ocuppation: "99",
-      image: "sporty-smartwatch.jpg",
+      image: "img/biblio.jpg",
     },
     {
       productName: "Bloque J sala konder",
       category: "Jacket",
       ocuppation: "29",
-      image: "knitted-top.jpg",
+      image: "img/biblio.jpg",
     },
     {
       productName: "Bloque b piso 2",
       category: "Bottomwear",
       ocuppation: "129",
-      image: "black-leather-jacket.jpg",
+      image: "img/biblio.jpg",
     },
     {
       productName: "Bloque F piso 2",
       category: "Jacket",
       ocuppation: "89",
-      image: "pink-trousers.jpg",
+      image: "img/biblio.jpg",
     },
   ],
 };
@@ -48,7 +48,7 @@ function createCard(product) {
   let image = document.createElement("img");
   image.setAttribute("src", product.image);
   imgContainer.appendChild(image);
-  card.appendChild(imgContainer);
+ 
 
   let container = document.createElement("div");
   container.classList.add("container");
