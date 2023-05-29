@@ -21,7 +21,7 @@ La aplicación web permitirá a los usuarios ver la ocupación en distintos espa
 Se implementó en Python Una pagina web para permitir ver a los usuarios la ocupación en distintos espacios de la empresa, asi como tener reportes de dichos lugares para el administrador de la aplicación. Se aplicaron conceptos de **Herencia, Encapsulación, Decoradores y Unit Test.**
 
 ## **UML**
-
+![](https://github.com/wilsone24/Poo-Project/blob/main/UML.png)
 
 ## **Instrucciones**
 1. Ingresar en el enlace del repositorio de Github: https://github.com/wilsone24/Poo-Project
