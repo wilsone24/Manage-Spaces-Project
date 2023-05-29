@@ -17,18 +17,25 @@ La aplicación web permitirá a los usuarios ver la ocupación en distintos espa
 
 
 ## **Funcionalidad**
-Se implementó en Python los métodos que permitan el cálculo de la cantidad de vidrio (Principalmente) y los distintos materiales que se recogió en todas las rutas de un día en específico. Se aplicaron conceptos de **Herencia, Polimorfismo, Encapsulación, Decoradores, Metodos Get y set, Patron de diseño observer, Patron de diseño Singleton y Unit Test.**
+Se implementó en Python Una pagina web para permitir ver a los usuarios la ocupación en distintos espacios de la empresa, asi como tener reportes de dichos lugares para el administrador de la aplicación. Se aplicaron conceptos de **Herencia, Encapsulación, Decoradores y Unit Test.**
 
 ## **UML**
 
-![](https://github.com/wilsone24/Final-Poo/blob/main/UML.png)
 
 ## **Instrucciones**
-1. Ingresar en el enlace del repositorio de Github: https://github.com/wilsone24/Final-Poo
+1. Ingresar en el enlace del repositorio de Github: https://github.com/wilsone24/Poo-Project
 
-2. Seleccionar la parte de code y copiar el HTTPS: https://github.com/wilsone24/Final-Poo.git
+2. Seleccionar la parte de code y copiar el HTTPS: https://github.com/wilsone24/Poo-Project.git
 
-3. Ingresar a VsCode o desde gitBash y clonar el repositorio: git clone https://github.com/wilsone24/Final-Poo.git
+3. Ingresar a VsCode o desde gitBash y clonar el repositorio: git clone https://github.com/wilsone24/Poo-Project.git
+
+4. Una vez dentro del codigo, crear una nueva terminal y ejecutar el siguiente comando: pip install -r "\requirements.txt", Este permitirá instalar todas las lirerias necesarias para el correcto funcionamiento del programa.
+
+5. Abrir la carpeta src
+
+6. Buscar el archivo app.py y ejecutarlo, o colocando en la terminal
+
+7. Una vez que se ejecute
 
 ### **Ejecutar App**
 
@@ -36,13 +43,26 @@ Una vez Clonado el repositorio se encontrará con 3 carpetas y 4 archivos, de lo
 
 Así mismo si quiere verificar el codigo, clases, funcionalidades, entre otros aspectos, la clasificacion de las carpetas es la siguiente:
 
-1. **Entidades:** Contiene las clases en los distintos archivos que pueden ser un ente como lo son: Camiones, Empleados, Observador y empresa. Sus respectivos archivos son Camiones.py, Empleados.py, Empresa.py y Observer.py, estos contendran todo el codigo, clases y funciones.
+1. **Capturas:** 
 
-2. **Funcionalidades:** Contiene las clases en los distintos archivos que pueden ser Funcionalidades del programa  y con lo que se puede interactuar como lo son: Puntos Geograficos, Recolección, Turnos y La funcion principal. Sus respectivos archivos son PuntoGeografico.py, Recoleccion.py, Turnos.py y Funciones.py, estos contendran todo el codigo, clases y funciones.
+2. **database:** 
+3. **models:** 
 
-2. **RecursosTests:** Contiene Recursos necesarios para el correcto funcionamiento de las pruebas unitarias
+4. **static:** 
+
+5. **templates:** 
+
+6. **Unit tests:** Contiene Recursos necesarios para el correcto funcionamiento de las pruebas unitarias
+
+7. **app.py:** 
+
+8. **config.py:** Contiene Configuracion necesaria de la aplicación
+
+9. **correos.py:** Contiene Recursos necesarios para el correcto funcionamiento del envio de correos
+
+10. **Requirements.py:** Contiene todas las librerias necesarias para instalar la app
 
 ### **Verificar Pruebas Unitarias**
-Para Verificar las distintas pruebas unitarias que se le hicieron a las funciones unicamente se dirigirá a la carpeta **Unit tests**, entrara a los distintos archivos de pruebas que estan dentro de la carpeta y los ejecutará.
+Para Verificar las distintas pruebas unitarias que se le hicieron a las funciones unicamente se dirigirá a la carpeta **Unit tests** dentro de la carpeta **src**, entrara a los distintos archivos de pruebas que estan dentro de la carpeta y los ejecutará.
 
 * El resultado de la prueba unitaria será mostrado en consola.
