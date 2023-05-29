@@ -1,14 +1,35 @@
+#Librerias
 from .entities.User import User
 import sqlite3
 
 def open_connection():
+    """Función para abrir una conexión con la base de datos
+
+    Returns:
+        sqlite3.Connection: Conexión con la base de datos
+    """
     conn = sqlite3.connect('src/database/databa.db')
     return conn
 
-def close_connection(conn):
+def close_connection(conn)->None:
+    """Función para cerrar una conexión con la base de datos
+
+    Args:
+        conn (): Conexión con la base de datos
+    """
     conn.close()
 
 def perform_query(conn, query, params):
+    """_summary_
+
+    Args:
+        conn (): Conexión con la base de datos
+        query (): Consult a realizar
+        params (): Parametros de la consulta
+
+    Returns:
+        result: Resultado de la consulta
+    """
     cursor = conn.cursor()
     cursor.execute(query, params)
     result = cursor.fetchone()
@@ -16,8 +37,16 @@ def perform_query(conn, query, params):
     return result
 
 class ModelUser():
-    @classmethod
-    def login(self,user):
+    @classmethod 
+    def login(self,user)->None:
+        """Función para realizar el login de un usuario
+
+        Args:
+            user (): Usuario a buscar
+
+        Raises:
+            Exception: excepción al realizar la consulta
+        """
         try:
             conn = open_connection()
             query = "SELECT id, username, password, fullname FROM Usuarios WHERE username = ?"
@@ -34,7 +63,16 @@ class ModelUser():
             close_connection(conn)
 
     @classmethod
-    def get_by_id(self, id):
+    def get_by_id(self, id)->None:
+        """Función para obtener un usuario por su id
+
+        Args:
+            id (): identificador del usuario
+
+        Raises:
+            Exception: excepción al realizar el query
+
+        """
         try:
             conn = open_connection()
             query = "SELECT id, username, fullname FROM Usuarios WHERE id = ?"
@@ -50,7 +88,15 @@ class ModelUser():
             close_connection(conn)
 
     @classmethod
-    def register(self,params):
+    def register(self,params)->None:
+        """Función para registrar un usuario
+
+        Args:
+            params (): Parametros de la consulta
+
+        Raises:
+            Exception: excepción al realizar el query
+        """
         try:
             conn = open_connection()
             query = "INSERT INTO Usuarios (username, password, fullname) VALUES (?, ?, ?)"

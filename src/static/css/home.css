@@ -28,6 +28,17 @@
     text-decoration: none;
   }
 
+  .reporte{
+    float: right;
+    padding: 10px 20px;
+    background-color: #2b6185;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 10px;
+  }
 
   body {
     background-color: #f5f8ff;

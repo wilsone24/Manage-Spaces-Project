@@ -1,3 +1,6 @@
+"""Configuraciones de la aplicación
+"""
+
 class Config:
     SECRET_KEY = 'B!1w8NAt1T^%kvhUI*S^'
 

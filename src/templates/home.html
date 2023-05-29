@@ -5,6 +5,9 @@
 <h1>Bienvenido {{ nombre }}</h1>
 <div class="divvv" >
     <a class="cerrars"  href="{{ url_for('logout') }}">Logout</a>
+    {% if nombre == "Administrador" %}
+      <a class="reporte"  href="{{ url_for('modulo')}}">Reportes</a>
+    {% endif %}
 </div>
 <div class="wrapper">
     <div id="search-container">

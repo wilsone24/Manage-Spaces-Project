@@ -1,54 +1,46 @@
+/* Genera las caraceristicas de los espacios */
 let products = {
   data: [
     {
       productName: "Biblioteca Karl C. Parrish Jr.",
-      category: "Topwear",
+      category: "t",
       ocuppation: "35",
-      image: "{{url_for('static', filename='img/biblio.jpg')}}",
     },
     {
       productName: "Casa de Estudio Alfredo Correa De Andreis",
-      category: "Bottomwear",
+      category: "b",
       ocuppation: "64",
-      image: "img/biblio.jpg",
     },
     {
       productName: "Bloque k salon cree",
-      category: "Watch",
+      category: "w",
       ocuppation: "99",
-      image: "img/biblio.jpg",
     },
     {
       productName: "Bloque J sala konder",
-      category: "Jacket",
+      category: "a",
       ocuppation: "29",
-      image: "img/biblio.jpg",
     },
     {
       productName: "Bloque b piso 2",
-      category: "Bottomwear",
+      category: "b",
       ocuppation: "129",
-      image: "img/biblio.jpg",
     },
     {
       productName: "Bloque F piso 2",
-      category: "Jacket",
+      category: "a",
       ocuppation: "89",
-      image: "img/biblio.jpg",
     },
   ],
 };
+
+/* Crea las tarjetas con las caracteristicas de los espacios */
 function createCard(product) {
   let card = document.createElement("div");
   card.classList.add("card", product.category);
 
   let imgContainer = document.createElement("div");
   imgContainer.classList.add("image-container");
-
-  let image = document.createElement("img");
-  image.setAttribute("src", product.image);
-  imgContainer.appendChild(image);
- 
 
   let container = document.createElement("div");
   container.classList.add("container");
@@ -65,6 +57,7 @@ function createCard(product) {
   card.appendChild(container);
   return card;
 }
+/* Muestra todos los espacios */
 
 function displayAllProducts() {
   let productsContainer = document.getElementById("products");
@@ -76,6 +69,8 @@ function displayAllProducts() {
   }
 }
 
+/* Funcion para actualizar la ocupación */
+
 function updateOccupation() {
   let cards = document.querySelectorAll(".card");
 
@@ -85,6 +80,7 @@ function updateOccupation() {
     ocuppationElement.innerText = "Ocupación: " + randomOccupation + " Personas";
   });
 }
+/* Funcion para filtrar los elementos */
 
 function filterProducts(searchInput) {
   let elements = document.querySelectorAll(".product-name");
@@ -98,12 +94,14 @@ function filterProducts(searchInput) {
     }
   });
 }
+/* Filtar productos */
 
 document.getElementById("search-input").addEventListener("input", () => {
   let searchInput = document.getElementById("search-input").value;
   filterProducts(searchInput);
 });
 
+/* Se ejecuta al iniciar */
 window.onload = () => {
   displayAllProducts();
   setInterval(updateOccupation, 10000); // Actualiza la ocupación cada 10 segundos
