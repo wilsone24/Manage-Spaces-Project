@@ -6,6 +6,8 @@ from correos import mensajes, Registro_Diario, generarIMG
 from models.ModelUser import ModelUser
 from models.ModelUser import ModelUser
 from models.entities.User import User
+from models.entities.admin import admin
+from models.entities.graph import graph, Reporte
 
 app = Flask(__name__) 
 
@@ -79,6 +81,7 @@ def modulo():
         subject = 'Reporte del dia'
         message = 'Se ha realizado un reporte general del dia'
         attach = generarIMG()
+        Reporte.addGraph(attach)
         nuevo = mensajes(name, email, subject, message, attach)
         nuevo.enviar()
         Registro_Diario.agregar_elemento(nuevo)
